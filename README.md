@@ -11,7 +11,7 @@ var includeFolder = require('include-folder'),
     folder = includeFolder("./aFolder");
 ```
 
-Supposing that the content of aFolder was the same as in [the sample in test][https://github.com/parroit/include-folder/tree/master/test/files]
+Supposing that the content of aFolder was the same as in [the sample in test](https://github.com/parroit/include-folder/tree/master/test/files])
 folder var will contains:
 
 ```javascript
