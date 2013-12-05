@@ -14,15 +14,7 @@ describe("include_folder", function () {
         expect(includeFolder._testHook).to.be.an('object');
     });
 
-    describe ("generated source code",function(){
-        var folderModule;
-
-        before(function(){
-            var source = includeFolder._testHook.buildSource("./test/files");
-            console.log(source);
-            folderModule = (new Function("require","__dirname",source))(require,__dirname+"/files/");
-        });
-
+    function moduleCheck(folderModule) {
         it("is an object", function () {
             expect(folderModule).to.be.an('object');
         });
@@ -47,6 +39,20 @@ describe("include_folder", function () {
         it("properties values are file content", function () {
             expect(folderModule.file1).to.be.equal("this is file1 content");
         });
+    }
+
+    describe ("generated source code",function(){
+        var source = includeFolder._testHook.buildSource("./test/files"),
+            folderModule = (new Function("require","__dirname",source))(require,__dirname+"/files/");
+
+
+        moduleCheck(folderModule);
+    });
+
+    describe ("returned object",function(){
+
+
+        moduleCheck(includeFolder("./test/files"));
     });
 
 });
