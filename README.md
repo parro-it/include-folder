@@ -1,5 +1,5 @@
 # include-folder
-[![Build Status](https://secure.travis-ci.org/parroit/include-folder.png?branch=master)](http://travis-ci.org/parroit/include-folder)  [![Npm module](https://badge.fury.io/js/include-folder.png)](https://npmjs.org/package/include-folder) [![Code Climate](https://codeclimate.com/github/parroit/include-folder.png)](https://codeclimate.com/github/parroit/include-folder)
+[![Build Status](https://secure.travis-ci.org/parroit/include-folder.png?branch=master)](http://travis-ci.org/parroit/include-folder)  [![Npm module](https://badge.fury.io/js/include-folder.png)](https://npmjs.org/package/include-folder) [![Code Climate](https://codeclimate.com/repos/52a0d507f3ea004212037112/badges/0d17143b49ddb8284f13/gpa.png)](https://codeclimate.com/repos/52a0d507f3ea004212037112/feed)
 
 Expose the content of each file in a folder as an object property.
 
