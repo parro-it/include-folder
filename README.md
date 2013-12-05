@@ -7,15 +7,21 @@ The best project ever.
 Install the module with: `npm install include-folder --save`
 
 ```javascript
-var include_folder = require('include-folder');
-include_folder.awesome(); // "awesome"
+var includeFolder = require('include-folder'),
+    folder = includeFolder("./aFolder");
 ```
 
-## Documentation
-_(Coming soon)_
+Supposing that the content of aFolder was the same as in [the sample in test][https://github.com/parroit/include-folder/tree/master/test/files]
+folder var will contains:
 
-## Examples
-_(Coming soon)_
+```javascript
+{
+    file3OtherFile: 'this is file3OtherContent content',
+    file1: 'this is file1 content',
+    file1_1: 'this is file1_1 content'
+}
+```
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style.

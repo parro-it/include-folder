@@ -1,7 +1,7 @@
 {
   "name": "include-folder",
-  "description": "The best project ever.",
-  "version": "0.1.0",
+  "description": "expose the content of each file in a folder as an object property.",
+  "version": "0.2.0",
   "homepage": "https://github.com/parroit/include-folder",
   "author": {
     "name": "parroit",
@@ -33,7 +33,7 @@
     "expect.js": "~0.2.0",
     "grunt-contrib-watch": "~0.5.3"
   },
-  "keywords": [],
+  "keywords": ["folder","content","file","require","readFileSync"],
   "dependencies": {
     "lodash": "~2.4.1"
   }

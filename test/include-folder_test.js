@@ -52,7 +52,9 @@ describe("include_folder", function () {
     describe ("returned object",function(){
 
 
-        moduleCheck(includeFolder("./test/files"));
+        var folderModule = includeFolder("./test/files");
+
+        moduleCheck(folderModule);
     });
 
 });
