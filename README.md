@@ -6,6 +6,8 @@ The best project ever.
 ## Getting Started
 Install the module with: `npm install include-folder --save`
 
+The use like this:
+
 ```javascript
 var includeFolder = require('include-folder'),
     folder = includeFolder("./aFolder");
