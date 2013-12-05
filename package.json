@@ -1,0 +1,37 @@
+{
+  "name": "include-folder",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/parroit/include-folder",
+  "author": {
+    "name": "parroit",
+    "email": "andrea.parodi@ebansoftware.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/parroit/include-folder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/parroit/include-folder/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/parroit/include-folder/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/include-folder",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-mocha-test": "~0.7.0",
+    "expect.js": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "keywords": []
+}
