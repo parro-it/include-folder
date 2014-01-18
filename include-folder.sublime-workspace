@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"char",
+				"charAt"
+			],
+			[
+				"file",
+				"fileName"
+			],
+			[
 				"sub",
 				"sublime_text"
 			]
@@ -12,11 +20,11 @@
 	"buffers":
 	[
 		{
-			"file": "package.json",
+			"file": "lib/include-folder.js",
 			"settings":
 			{
-				"buffer_size": 1013,
-				"line_ending": "Unix"
+				"buffer_size": 1853,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -92,6 +100,11 @@
 	},
 	"file_history":
 	[
+		"/media/parroit/Elements/src/folderify/package.json",
+		"/media/parroit/Elements/src/include-folder/test/files/.DS_Store",
+		"/media/parroit/Elements/src/include-folder/lib/include-folder.js",
+		"/media/parroit/Elements/src/include-folder/package.json",
+		"/media/parroit/Elements/src/include-folder/test/include-folder_test.js",
 		"/home/parroit/src/Abdero/abdero-server/lib/imap-fetcher.js",
 		"/home/parroit/src/Abdero/abdero-fetcher/Gruntfile.js",
 		"/home/parroit/src/Abdero/abdero-fetcher/lib/abdero-fetcher.js",
@@ -124,7 +137,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -138,6 +151,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"3",
+			"stripExtensions",
 			"//.*",
 			"           ",
 			"'",
@@ -171,11 +186,11 @@
 			[
 				{
 					"buffer": 0,
-					"file": "package.json",
-					"semi_transient": false,
+					"file": "lib/include-folder.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1013,
+						"buffer_size": 1853,
 						"regions":
 						{
 						},
@@ -188,10 +203,12 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -260,7 +277,7 @@
 		[
 			[
 				"",
-				"~/lin/sublime/home.sublime-project"
+				"~/src/Abdero/mapp.sublime-project"
 			]
 		],
 		"width": 380.0
