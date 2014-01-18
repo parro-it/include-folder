@@ -9,7 +9,7 @@ This module is browserifiable using the [folderify transform](https://github.com
 ## Getting Started
 Install the module with: `npm install include-folder --save`
 
-The use like this:
+Then use like this:
 
 ```javascript
 var includeFolder = require('include-folder'),
@@ -26,6 +26,22 @@ folder var will contains:
     file1_1: 'this is file1_1 content'
 }
 ```
+
+## Filter included files
+
+You can filter which files to include using the filter parameter:
+
+
+```javascript
+var includeFolder = require('include-folder'),
+    folder = includeFolder("./aFolder",/^a.*/);
+```
+
+This only include files that start with 'a'
+
+Filter parameters defaults to /^[^.].*$/, which include every file
+in the folder, except hidden ones (these that has a name starting with dot). 
+
 
 
 ## Contributing
