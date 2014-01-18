@@ -1,7 +1,7 @@
 {
   "name": "include-folder",
   "description": "expose the content of each file in a folder as an object property.",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "homepage": "https://github.com/parroit/include-folder",
   "author": {
     "name": "parroit",
