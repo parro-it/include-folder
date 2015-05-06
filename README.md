@@ -40,9 +40,15 @@ var includeFolder = require('include-folder'),
 This only include files that start with 'a'
 
 Filter parameters defaults to /^[^.].*$/, which include every file
-in the folder, except hidden ones (these that has a name starting with dot). 
+in the folder, except hidden ones (these that has a name starting with dot).
 
+## Preserve filenames
 
+To prevent normalization and stripping of the extension in the result object, the `preserveFilenames` option can be used:
+
+```javascript
+includeFolder('./www', null, { preserveFilenames: true });
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style.
@@ -50,6 +56,6 @@ Add unit tests for any new or changed functionality.
 
 
 ## License
-Copyright (c) 2013 parroit  
+Copyright (c) 2013 parroit
 Licensed under the MIT license.
 
