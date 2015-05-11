@@ -1,5 +1,5 @@
 # include-folder
-[![Build Status](https://secure.travis-ci.org/parroit/include-folder.png?branch=master)](http://travis-ci.org/parroit/include-folder)  [![Npm module](https://badge.fury.io/js/include-folder.png)](https://npmjs.org/package/include-folder) [![Code Climate](https://codeclimate.com/repos/52a0d507f3ea004212037112/badges/0d17143b49ddb8284f13/gpa.png)](https://codeclimate.com/repos/52a0d507f3ea004212037112/feed)
+[![Build Status](https://secure.travis-ci.org/parro-it/include-folder.png?branch=master)](http://travis-ci.org/parro-it/include-folder)  [![Npm module](https://badge.fury.io/js/include-folder.png)](https://npmjs.org/package/include-folder) [![Code Climate](https://codeclimate.com/github/parro-it/include-folder/badges/gpa.svg)](https://codeclimate.com/github/parro-it/include-folder)
 
 Expose the content of each file in a folder as an object property.
 
@@ -16,7 +16,7 @@ var includeFolder = require('include-folder'),
     folder = includeFolder("./aFolder");
 ```
 
-Supposing that the content of aFolder was the same as in [the sample in test](https://github.com/parroit/include-folder/tree/master/test/files)
+Supposing that the content of aFolder was the same as in [the sample in test](https://github.com/parro-it/include-folder/tree/master/test/files)
 folder var will contains:
 
 ```javascript
@@ -40,9 +40,15 @@ var includeFolder = require('include-folder'),
 This only include files that start with 'a'
 
 Filter parameters defaults to /^[^.].*$/, which include every file
-in the folder, except hidden ones (these that has a name starting with dot). 
+in the folder, except hidden ones (these that has a name starting with dot).
 
+## Preserve filenames
 
+To prevent normalization and stripping of the extension in the result object, the `preserveFilenames` option can be used:
+
+```javascript
+includeFolder('./www', null, { preserveFilenames: true });
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style.
@@ -50,6 +56,6 @@ Add unit tests for any new or changed functionality.
 
 
 ## License
-Copyright (c) 2013 parroit  
+Copyright (c) 2013 parroit
 Licensed under the MIT license.
 
