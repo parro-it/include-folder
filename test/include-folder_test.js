@@ -66,8 +66,8 @@ describe("include_folder", function() {
         var source,
             folderModule;
 
+
         source = includeFolder._testHook.buildSource("./test/files", /^[^.].*$/),
-        console.log(source)
         folderModule = (new Function("require", "__dirname", source))(require, __dirname + "/files/");
 
         moduleCheck(folderModule, 3);
