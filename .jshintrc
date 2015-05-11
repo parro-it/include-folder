@@ -4,8 +4,8 @@
     "node": true,
     "browser": false,
     "noyield": true,
+    "quotmark": "single",
     "globals": {
-        "Promise": true,
         "describe": true,
         "it": true,
         "before": true,
