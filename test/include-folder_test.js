@@ -1,25 +1,24 @@
 'use strict';
 
 var expect = require("expect.js"),
-    _ = require("lodash"),
     includeFolder = require("../lib/include-folder");
 
 
 describe("normalize", function() {
     it("handles .DS_Store", function() {
-        var normalized = includeFolder._testHook.normalize(".DS_Store");
+        var normalized = includeFolder.normalize(".DS_Store");
         expect(normalized).to.be.equal("DS_Store");
     });
 });
 
 describe("stripExtension", function() {
     it("remove extension", function() {
-        var normalized = includeFolder._testHook.stripExtension("test.txt");
+        var normalized = includeFolder.stripExtension("test.txt");
         expect(normalized).to.be.equal("test");
     });
 
     it("handles hidden files", function() {
-        var normalized = includeFolder._testHook.stripExtension(".txt");
+        var normalized = includeFolder.stripExtension(".txt");
         expect(normalized).to.be.equal("txt");
     });
 });
@@ -28,11 +27,7 @@ describe("stripExtension", function() {
 
 describe("include_folder", function() {
     it("is defined", function() {
-        expect(includeFolder).to.be.an('function');
-    });
-
-    it("has test hook", function() {
-        expect(includeFolder._testHook).to.be.an('object');
+        expect(includeFolder).to.be.a('function');
     });
 
     function moduleCheck(folderModule, expectedCount) {
@@ -40,9 +35,8 @@ describe("include_folder", function() {
             expect(folderModule).to.be.an('object');
         });
 
-
         it("has a property for each file", function() {
-            expect(_.keys(folderModule).length).to.be.equal(expectedCount);
+            expect(Object.keys(folderModule).length).to.be.equal(expectedCount);
         });
 
         it("extension is stripped from file names", function() {
@@ -66,8 +60,7 @@ describe("include_folder", function() {
         var source,
             folderModule;
 
-
-        source = includeFolder._testHook.buildSource("./test/files", /^[^.].*$/),
+        source = includeFolder.buildSource("./test/files", /^[^.].*$/),
         folderModule = (new Function("require", "__dirname", source))(require, __dirname + "/files/");
 
         moduleCheck(folderModule, 3);
@@ -75,19 +68,30 @@ describe("include_folder", function() {
 
 
     describe("returned object", function() {
-
-
         var folderModule = includeFolder("./test/files");
 
         moduleCheck(folderModule, 3);
     });
 
     describe("work with hidden files", function() {
-
-
         var folderModule = includeFolder("./test/files", /.*/);
 
         moduleCheck(folderModule, 4);
+    });
+
+    describe("when the preserveFilenames option is true", function() {
+        beforeEach(function(){
+            this.folderModule = includeFolder("./test/files", null, { preserveFilenames: true });
+        });
+
+        it("extension is not stripped from file names", function() {
+            expect("file1.txt" in this.folderModule).to.be.equal(true);
+            expect("file1.check" in this.folderModule).to.be.equal(true);
+        });
+
+        it("filename is not normalized", function() {
+            expect("file-3-other&file.txt" in this.folderModule).to.be.equal(true);
+        });
     });
 
 });

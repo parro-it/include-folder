@@ -39,7 +39,5 @@
     "require",
     "readFileSync"
   ],
-  "dependencies": {
-    "lodash": "~2.4.1"
-  }
+  "dependencies": {}
 }
