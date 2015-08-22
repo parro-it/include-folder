@@ -7,6 +7,9 @@
     "name": "parroit",
     "email": "andrea@parro.it"
   },
+  "eslintConfig": {
+    "extends": "eslint-config-semistandard"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/parro-it/include-folder.git"
@@ -25,12 +28,15 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "test": "jshint lib/*.js test/*.js && mocha test/*.js",
+    "test": "eslint lib/*.js test/*.js && mocha test/*.js",
     "watch": "mocha --watch test/*.js"
   },
   "devDependencies": {
-    "expect.js": "~0.2.0",
-    "jshint": "^2.7.0",
+    "eslint": "^1.2.1",
+    "eslint-config-semistandard": "^5.0.0",
+    "eslint-config-standard": "^4.1.0",
+    "eslint-plugin-standard": "^1.2.0",
+    "expect.js": "^0.2.0",
     "mocha": "^2.2.4"
   },
   "keywords": [
