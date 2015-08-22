@@ -29,6 +29,7 @@
   },
   "scripts": {
     "test": "eslint lib/*.js test/*.js && mocha test/*.js",
+    "prepublish": "npm run test",
     "watch": "mocha --watch test/*.js"
   },
   "devDependencies": {
