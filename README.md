@@ -3,7 +3,7 @@
 
 Expose the content of each file in a folder as an object property.
 
-This module is browserifiable using the [folderify transform](https://github.com/parroit/folderify)
+This module is browserifiable using the [folderify transform](https://github.com/parro-it/folderify)
 
 
 ## Getting Started
@@ -56,6 +56,8 @@ Add unit tests for any new or changed functionality.
 
 
 ## License
-Copyright (c) 2013 parroit
+
+Copyright (c) 2013 Andrea Parodi
+
 Licensed under the MIT license.
 
