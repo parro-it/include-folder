@@ -88,4 +88,31 @@ describe('include_folder', function () {
     });
   });
 
+  describe('when the recurse option is true', function () {
+    beforeEach(function () {
+      this.folderModule = includeFolder('./test/files', null, { recurse: true });
+    });
+
+    it('subfolders are included', function () {
+      expect('subfolder' in this.folderModule).to.be.equal(true);
+      expect('file4' in this.folderModule.subfolder).to.be.equal(true);
+      expect('file5' in this.folderModule.subfolder).to.be.equal(true);
+    });
+  });
+
+  describe('when using globs', function () {
+    beforeEach(function () {
+      this.folderModule = includeFolder('./test/files', [
+        '!file*',
+        'subfolder/*.txt'
+      ]);
+    });
+
+    it('filters, and recursion is automatic', function () {
+      expect('file1' in this.folderModule).to.be.equal(false);
+      expect('subfolder' in this.folderModule).to.be.equal(true);
+      expect('file4' in this.folderModule.subfolder).to.be.equal(true);
+      expect('file5' in this.folderModule.subfolder).to.be.equal(false);
+    });
+  });
 });

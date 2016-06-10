@@ -27,10 +27,34 @@ folder var will contains:
 }
 ```
 
+## Recursion
+
+You can include files recursive using the `recurse` parameter:
+
+
+```javascript
+var includeFolder = require('include-folder'),
+    folder = includeFolder("./aFolder",/^a.*/, { recurse: true });
+```
+
+This include files that start with 'a', in any subfolder, subfolders are created as object properties.
+
 ## Filter included files
 
 You can filter which files to include using the filter parameter:
 
+### Using Globs
+
+```javascript
+var includeFolder = require('include-folder'),
+    folder = includeFolder("./aFolder", [ '**/*.txt', '!README*' ]);
+```
+
+This includes every *.txt recursively (if a pattern references subfolders, `options.recurse` is enabled automatically) but excludes files starting with "README".
+
+(see https://github.com/sindresorhus/multimatch for details on matching with multiple globs)
+
+### Using a Regular Expression
 
 ```javascript
 var includeFolder = require('include-folder'),
@@ -60,4 +84,3 @@ Add unit tests for any new or changed functionality.
 Copyright (c) 2013 Andrea Parodi
 
 Licensed under the MIT license.
-
