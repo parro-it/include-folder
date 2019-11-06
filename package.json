@@ -28,7 +28,7 @@
     "watch": "mocha --watch test/*.js"
   },
   "devDependencies": {
-    "eslint": "^1.2.1",
+    "eslint": "^6.6.0",
     "eslint-config-semistandard": "^5.0.0",
     "eslint-config-standard": "^4.1.0",
     "eslint-plugin-standard": "^1.2.0",
